@@ -49,6 +49,49 @@ public abstract class RacerBot extends RobotSE {
         return currentThing;
     }
 
+    public void moveToIntersection(Intersection intersection){
+        int avenue = super.getAvenue();
+        int street = super.getStreet();
+        Direction streetDirection;
+        int biggerA, smallerA, biggerS, smallerS;
+        Direction aveDirection;
+
+
+       
+        if(street > intersection.getStreet()){
+            streetDirection = Direction.NORTH;
+            biggerS = street;
+            smallerS = intersection.getStreet();
+        }else{
+            streetDirection = Direction.SOUTH;
+            biggerS = intersection.getStreet();
+            smallerS = street;
+        }
+
+
+        if(avenue < intersection.getAvenue()){
+            aveDirection = Direction.EAST;
+            biggerA = intersection.getAvenue();
+            smallerA = avenue;
+        }else{
+            aveDirection = Direction.WEST;
+            biggerA = avenue;
+            smallerA = intersection.getAvenue();
+        }
+
+
+       
+        while(getDirection() != streetDirection){
+            turnLeft();
+        }
+        move(biggerS - smallerS);
+       
+        while(getDirection() != aveDirection){
+            turnLeft();
+        }
+        move(biggerA - smallerA);
+    }
+
     @Override
     public void move(int i) {
         int y = super.getAvenue();
