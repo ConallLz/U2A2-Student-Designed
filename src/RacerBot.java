@@ -32,6 +32,7 @@ public abstract class RacerBot extends RobotSE {
         return count;
     }
 
+    /*
     public Thing getRandomThing() {
         City city = this.getCity();
         IPredicate thingCountIPredicate = city.getThingCountPredicate();
@@ -48,6 +49,7 @@ public abstract class RacerBot extends RobotSE {
 
         return currentThing;
     }
+    */
 
     public void moveToIntersection(Intersection intersection){
         int avenue = super.getAvenue();
@@ -55,7 +57,6 @@ public abstract class RacerBot extends RobotSE {
         Direction streetDirection;
         int biggerA, smallerA, biggerS, smallerS;
         Direction aveDirection;
-
 
        
         if(street > intersection.getStreet()){
