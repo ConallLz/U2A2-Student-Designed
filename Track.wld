@@ -1,0 +1,140 @@
+# Window title
+Robot Race
+
+# first street, first avenue, num streets, num avenues
+0 0 11 26
+
+# intersection size
+48
+
+# obstacles
+becker.robots.Wall 5 5 NORTH
+becker.robots.Wall 5 5 SOUTH
+becker.robots.Wall 5 5 WEST
+
+becker.robots.Wall 5 10 EAST
+becker.robots.Wall 5 10 WEST
+
+becker.robots.Wall 5 15 NORTH
+becker.robots.Wall 5 15 EAST
+becker.robots.Wall 5 15 SOUTH
+
+becker.robots.Wall 5 20 NORTH
+becker.robots.Wall 5 20 SOUTH
+becker.robots.Wall 5 20 WEST
+
+becker.robots.Wall 4 20 EAST
+becker.robots.Wall 3 20 EAST
+becker.robots.Wall 2 20 EAST
+becker.robots.Wall 1 20 EAST
+
+becker.robots.Wall 6 20 EAST
+becker.robots.Wall 7 20 EAST
+becker.robots.Wall 8 20 EAST
+becker.robots.Wall 9 20 EAST
+
+becker.robots.Wall 0 12 EAST
+becker.robots.Wall 0 12 SOUTH
+
+becker.robots.Wall 10 12 EAST
+becker.robots.Wall 10 12 NORTH
+
+# goals
+becker.robots.Thing 5 25
+becker.robots.Thing 5 25
+becker.robots.Thing 5 25
+becker.robots.Thing 5 25
+becker.robots.Thing 5 25
+
+becker.robots.Thing 5 20
+becker.robots.Thing 5 15
+becker.robots.Thing 5 10
+becker.robots.Thing 5 5
+becker.robots.Thing 5 0
+
+becker.robots.Thing 0 12
+becker.robots.Thing 10 12
+
+# walls
+
+# top wall
+becker.robots.Wall 0 0 NORTH
+becker.robots.Wall 0 1 NORTH
+becker.robots.Wall 0 2 NORTH
+becker.robots.Wall 0 3 NORTH
+becker.robots.Wall 0 4 NORTH
+becker.robots.Wall 0 5 NORTH
+becker.robots.Wall 0 6 NORTH
+becker.robots.Wall 0 7 NORTH
+becker.robots.Wall 0 8 NORTH
+becker.robots.Wall 0 9 NORTH
+becker.robots.Wall 0 10 NORTH
+becker.robots.Wall 0 11 NORTH
+becker.robots.Wall 0 12 NORTH
+becker.robots.Wall 0 13 NORTH
+becker.robots.Wall 0 14 NORTH
+becker.robots.Wall 0 15 NORTH
+becker.robots.Wall 0 16 NORTH
+becker.robots.Wall 0 17 NORTH
+becker.robots.Wall 0 18 NORTH
+becker.robots.Wall 0 19 NORTH
+becker.robots.Wall 0 20 NORTH
+becker.robots.Wall 0 21 NORTH
+becker.robots.Wall 0 22 NORTH
+becker.robots.Wall 0 23 NORTH
+becker.robots.Wall 0 24 NORTH
+becker.robots.Wall 0 25 NORTH
+
+# bottom wall
+becker.robots.Wall 10 0 SOUTH
+becker.robots.Wall 10 1 SOUTH
+becker.robots.Wall 10 2 SOUTH
+becker.robots.Wall 10 3 SOUTH
+becker.robots.Wall 10 4 SOUTH
+becker.robots.Wall 10 5 SOUTH
+becker.robots.Wall 10 6 SOUTH
+becker.robots.Wall 10 7 SOUTH
+becker.robots.Wall 10 8 SOUTH
+becker.robots.Wall 10 9 SOUTH
+becker.robots.Wall 10 10 SOUTH
+becker.robots.Wall 10 11 SOUTH
+becker.robots.Wall 10 12 SOUTH
+becker.robots.Wall 10 13 SOUTH
+becker.robots.Wall 10 14 SOUTH
+becker.robots.Wall 10 15 SOUTH
+becker.robots.Wall 10 16 SOUTH
+becker.robots.Wall 10 17 SOUTH
+becker.robots.Wall 10 18 SOUTH
+becker.robots.Wall 10 19 SOUTH
+becker.robots.Wall 10 20 SOUTH
+becker.robots.Wall 10 21 SOUTH
+becker.robots.Wall 10 22 SOUTH
+becker.robots.Wall 10 23 SOUTH
+becker.robots.Wall 10 24 SOUTH
+becker.robots.Wall 10 25 SOUTH
+
+# left wall
+becker.robots.Wall 0 0 WEST
+becker.robots.Wall 1 0 WEST
+becker.robots.Wall 2 0 WEST
+becker.robots.Wall 3 0 WEST
+becker.robots.Wall 4 0 WEST
+becker.robots.Wall 5 0 WEST
+becker.robots.Wall 6 0 WEST
+becker.robots.Wall 7 0 WEST
+becker.robots.Wall 8 0 WEST
+becker.robots.Wall 9 0 WEST
+becker.robots.Wall 10 0 WEST
+
+# right wall
+becker.robots.Wall 0 25 EAST
+becker.robots.Wall 1 25 EAST
+becker.robots.Wall 2 25 EAST
+becker.robots.Wall 3 25 EAST
+becker.robots.Wall 4 25 EAST
+becker.robots.Wall 5 25 EAST
+becker.robots.Wall 6 25 EAST
+becker.robots.Wall 7 25 EAST
+becker.robots.Wall 8 25 EAST
+becker.robots.Wall 9 25 EAST
+becker.robots.Wall 10 25 EAST
