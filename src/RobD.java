@@ -16,6 +16,6 @@ public class RobD extends RacerBot {
      */
     public RobD(City city, int x, int y, Direction direction, int items) {
         super(city, x, y, direction, items);
-        this.setColor(Color.RED);
+        this.setColor(Color.BLACK);
     }
 }
