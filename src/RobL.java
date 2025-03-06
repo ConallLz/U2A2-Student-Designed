@@ -16,6 +16,6 @@ public class RobL extends RacerBot {
      */
     public RobL(City city, int x, int y, Direction direction, int items) {
         super(city, x, y, direction, items);
-        this.setColor(Color.BLUE);
+        this.setColor(Color.WHITE);
     }
 }
