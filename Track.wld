@@ -39,22 +39,6 @@ becker.robots.Wall 0 12 SOUTH
 becker.robots.Wall 10 12 EAST
 becker.robots.Wall 10 12 NORTH
 
-# goals
-becker.robots.Thing 5 25
-becker.robots.Thing 5 25
-becker.robots.Thing 5 25
-becker.robots.Thing 5 25
-becker.robots.Thing 5 25
-
-becker.robots.Thing 5 20
-becker.robots.Thing 5 15
-becker.robots.Thing 5 10
-becker.robots.Thing 5 5
-becker.robots.Thing 5 0
-
-becker.robots.Thing 0 12
-becker.robots.Thing 10 12
-
 # walls
 
 # top wall
