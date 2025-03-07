@@ -32,6 +32,29 @@ public abstract class RacerBot extends RobotSE {
         return count;
     }
 
+    public void moveAroundWall(){
+        turnLeft();
+        if(!frontIsClear()){
+            turnRight();
+            turnAround();
+            move();
+            turnRight();
+            move();
+            turnRight();
+            move(2);
+            turnRight();
+            move();
+            turnLeft();
+            return;
+        }
+        move();
+        turnRight();
+        move(2);
+        turnRight();
+        move();
+        turnLeft();
+    }
+
     public Goals getRandomThing() {
         City city = this.getCity();
         IPredicate thingCountIPredicate = city.getThingCountPredicate();
@@ -86,6 +109,7 @@ public abstract class RacerBot extends RobotSE {
             turnLeft();
         }
         move(biggerA - smallerA);
+        pickAllThings();
     }
 
     @Override
@@ -94,7 +118,10 @@ public abstract class RacerBot extends RobotSE {
         int things = super.countThingsInBackpack();
         
         for (int j = 0; j < i; j++) {
-            if (y > 19 && things < 2 || !super.frontIsClear()) { break; }
+            if (y > 19 && things < 2 || !super.frontIsClear()) {
+                moveAroundWall();
+                //break;
+            }
             super.move();
             y = super.getAvenue();
             things = super.countThingsInBackpack();

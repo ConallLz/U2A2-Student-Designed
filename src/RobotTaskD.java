@@ -14,6 +14,7 @@ public class RobotTaskD implements Runnable {
 	public void run() {
 		RacerBot rob = new RobD(field, 0, 10, Direction.EAST, 0);
 		Goals randomThing = rob.getRandomThing();
+		System.out.println(randomThing.getIntersection());
 
         rob.moveToIntersection(randomThing.getIntersection());
 
