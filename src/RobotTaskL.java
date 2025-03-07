@@ -3,7 +3,6 @@
  * Dates:
 */
 import becker.robots.*;
-import java.lang.reflect.Method;
 
 public class RobotTaskL implements Runnable {
 	private City field = null;
