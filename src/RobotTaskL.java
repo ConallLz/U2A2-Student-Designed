@@ -13,8 +13,22 @@ public class RobotTaskL implements Runnable {
 
 	public void run() {
 		RacerBot rob = new RobL(field, 0, 0, Direction.EAST, 0);
-		Goals randomThing = rob.getRandomThing();
-
-        rob.moveToIntersection(randomThing.getIntersection());
+		rob.move(12);
+		rob.pickThing();
+		rob.turnAround();
+		rob.move(2);
+		rob.turnLeft();
+		rob.move(5);
+		rob.pickThing();
+		rob.move(4);
+		rob.turnLeft();
+		rob.move(10);
+		rob.turnRight();
+		rob.move(1);
+		rob.turnLeft();
+		rob.move(5);
+		rob.turnLeft();
+		rob.move(5);
+		rob.pickAllThings();
 	}
 }
