@@ -2,7 +2,7 @@
  * Progammer: Conall Lorentz and Charles Damian
  * Dates: Mar. 3
 */
-import becker.robots.City;
+import becker.robots.*;
 
 public class RobotMain {
 	public static void main(String[] args) {
