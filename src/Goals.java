@@ -6,6 +6,11 @@ import becker.robots.*;
 
 // Allows extra features to be added to the Thing class
 public class Goals extends Thing{
+    /**
+     * @param city - City to add the goal to
+     * @param street - Street where the goal should be
+     * @param avenue - Avenue where the goal should be
+     */
     Goals(City city, int street, int avenue){
         super(city, street, avenue);
     }

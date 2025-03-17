@@ -4,6 +4,7 @@
 */
 import becker.robots.*;
 
+// Implements runnable so it can be run as a thread
 public class RobotTaskD implements Runnable {
 	private City field = null;
 

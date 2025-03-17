@@ -4,10 +4,15 @@
 */
 import becker.robots.*;
 
+// Implements runnable so it can be run as a thread
 public class RobotTaskL implements Runnable {
 	private City field = null;
 
+	/**
+	 * @param f - City where robot in the thread should be
+	 */
 	public RobotTaskL(City f) {
+		// Set city when the thread runs to what was given
         field = f;
     }
 
