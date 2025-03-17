@@ -2,10 +2,9 @@
  * Progammer: Conall Lorentz and Charles Damian
  * Dates:  Mar. 3-17
 */
-import java.util.NoSuchElementException;
-
 import becker.robots.*;
 
+// RacerBot is an abstract class that extends RobotSE made so both racers are equal
 public abstract class RacerBot extends RobotSE {
     // Constructor
     /**
@@ -23,7 +22,6 @@ public abstract class RacerBot extends RobotSE {
      * The move to intersection method finds the actual intersection to be moved to and then using the current intersection finds a nice route to get to the intersection
      * @param intersection - The intersection to move to
      */
-
     public void moveToIntersection(Intersection intersection) {
         int avenue = super.getAvenue();
         int street = super.getStreet();
@@ -75,16 +73,18 @@ public abstract class RacerBot extends RobotSE {
      */
     @Override
     public void move(int i) {
-        int y = super.getAvenue();
+        int x = super.getAvenue();
         int things = super.countThingsInBackpack();
         
         for (int j = 0; j < i; j++) {
-            if (y > 19 && things < 2 || !super.frontIsClear()) {
+            // Block robots from going towards the final goals if they do not have at least 2 goals
+            if (x > 19 && things < 2 || !super.frontIsClear()) {
                 break;
             }
             
+            // Move and update position as well as things
             super.move();
-            y = super.getAvenue();
+            x = super.getAvenue();
             things = super.countThingsInBackpack();
         }
     }
@@ -95,6 +95,7 @@ public abstract class RacerBot extends RobotSE {
     @Override
     public void pickThing() {
         Intersection intersection = super.getIntersection();
+        // If the final goal has already been picked up, do not try to pick it up again
         if (intersection.countThings() < 5 && intersection.getAvenue() == 25 && intersection.getStreet() == 5) {
             return;
         }
