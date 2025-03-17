@@ -9,5 +9,4 @@ public class Goals extends Thing{
     public Intersection getIntersection(){
         return super.getIntersection();
     }
-    
 }

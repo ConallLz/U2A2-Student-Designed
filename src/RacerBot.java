@@ -3,7 +3,6 @@
  * Dates:
 */
 import becker.robots.*;
-import java.util.Random;
 
 public abstract class RacerBot extends RobotSE {
     // Constructor
@@ -16,60 +15,6 @@ public abstract class RacerBot extends RobotSE {
      */
     public RacerBot(City city, int x, int y, Direction direction, int items) {
         super(city, y, x, direction, items);
-    }
-
-    public int getCityThingCount() {
-        City city = this.getCity();
-        IPredicate thingCountIPredicate = city.getThingCountPredicate();
-        IIterate<Thing> thingCountIIterate = city.examineThings(thingCountIPredicate);
-        int count = 0;
-
-        while (thingCountIIterate.hasNext()) {
-            thingCountIIterate.next();
-            count++; 
-        }
-
-        return count;
-    }
-
-    public void moveAroundWall(){
-        turnLeft();
-        if(!frontIsClear()){
-            turnRight();
-            turnAround();
-            move();
-            turnRight();
-            move();
-            turnRight();
-            move(2);
-            turnRight();
-            move();
-            turnLeft();
-            return;
-        }
-        move();
-        turnRight();
-        move(2);
-        turnRight();
-        move();
-        turnLeft();
-    }
-
-    public Goals getRandomThing() {
-        City city = this.getCity();
-        IPredicate thingCountIPredicate = city.getThingCountPredicate();
-        IIterate<Thing> thingCountIIterate = city.examineThings(thingCountIPredicate);
-
-        int count = getCityThingCount();
-        Random random = new Random();
-        int randomIndex = random.nextInt(count);
-        Goals currentThing = null;
-
-        for (int i = 0; i < randomIndex; i++) {
-            currentThing = (Goals) thingCountIIterate.next();
-        }
-
-        return currentThing;
     }
 
     public void moveToIntersection(Intersection intersection) {
@@ -119,9 +64,9 @@ public abstract class RacerBot extends RobotSE {
         
         for (int j = 0; j < i; j++) {
             if (y > 19 && things < 2 || !super.frontIsClear()) {
-                moveAroundWall();
-                //break;
+                break;
             }
+            
             super.move();
             y = super.getAvenue();
             things = super.countThingsInBackpack();
