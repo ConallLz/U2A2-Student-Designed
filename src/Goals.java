@@ -1,3 +1,7 @@
+/*
+ * Progammer: Conall Lorentz and Charles Damian
+ * Dates:  Mar. 3-17
+*/
 import becker.robots.*;
 
 public class Goals extends Thing{

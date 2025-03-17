@@ -1,6 +1,6 @@
 /*
  * Progammer: Charles Damian
- * Dates:
+ * Dates: Mar. 3-17
 */
 import becker.robots.*;
 import java.awt.Color;
