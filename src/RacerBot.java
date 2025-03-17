@@ -2,6 +2,8 @@
  * Progammer: Conall Lorentz and Charles Damian
  * Dates:  Mar. 3-17
 */
+import java.util.NoSuchElementException;
+
 import becker.robots.*;
 
 public abstract class RacerBot extends RobotSE {
@@ -77,6 +79,23 @@ public abstract class RacerBot extends RobotSE {
             super.move();
             y = super.getAvenue();
             things = super.countThingsInBackpack();
+        }
+    }
+
+    @Override
+    public void pickThing() {
+        Intersection intersection = super.getIntersection();
+        if (intersection.countThings() < 5 && intersection.getAvenue() == 25 && intersection.getStreet() == 5) {
+            return;
+        }
+
+        super.pickThing();
+    }
+
+    @Override
+    public void pickAllThings() {
+        while (super.canPickThing()) {
+           this.pickThing();
         }
     }
 }
