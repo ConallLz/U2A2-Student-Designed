@@ -82,6 +82,9 @@ public abstract class RacerBot extends RobotSE {
         }
     }
 
+    /**
+     * This is the overrided method of the pick thing to check if the current thing on the intersection has already been taken
+     */
     @Override
     public void pickThing() {
         Intersection intersection = super.getIntersection();
@@ -92,6 +95,9 @@ public abstract class RacerBot extends RobotSE {
         super.pickThing();
     }
 
+    /**
+     * This is the overrided method of the pickAllThings to ensure the version of pickThing used is the overrided pickthing of the class
+     */
     @Override
     public void pickAllThings() {
         while (super.canPickThing()) {
