@@ -19,7 +19,7 @@ public abstract class RacerBot extends RobotSE {
 
     /**
      * The move to intersection method finds the actual intersection to be moved to and then using the current intersection finds a nice route to get to the intersection
-     * @param intersection Intersection to move to
+     * @param intersection - The intersection to move to
      */
 
     public void moveToIntersection(Intersection intersection) {
@@ -60,8 +60,9 @@ public abstract class RacerBot extends RobotSE {
         move(biggerA - smallerA);
         pickAllThings();
     }
+    
     /**
-     * @param i the number of times to move
+     * @param i - The number of times to move
      */
     @Override
     public void move(int i) {
