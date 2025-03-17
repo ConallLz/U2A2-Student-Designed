@@ -31,6 +31,7 @@ public abstract class RacerBot extends RobotSE {
         int biggerA, smallerA, biggerS, smallerS;
         Direction aveDirection;
        
+        //this checks the greater between the current street and the street of the intersection to be moved to, and depending on which it faces north and south
         if (street > intersection.getStreet()) {
             streetDirection = Direction.NORTH;
             biggerS = street;
@@ -41,6 +42,7 @@ public abstract class RacerBot extends RobotSE {
             smallerS = street;
         }
 
+        //this checks the same for the avenue and depending on which is greater, it faces west or south
         if(avenue < intersection.getAvenue()){
             aveDirection = Direction.EAST;
             biggerA = intersection.getAvenue();
@@ -51,14 +53,19 @@ public abstract class RacerBot extends RobotSE {
             smallerA = intersection.getAvenue();
         }
        
+        //while loop to turn left until it is facing the street direction
         while(getDirection() != streetDirection){
             turnLeft();
         }
+        //this moves the difference between the current street and intersection street
         move(biggerS - smallerS);
        
+        //while loop to turn left until it is facing the avenue direction
         while(getDirection() != aveDirection){
             turnLeft();
         }
+
+        //this moves the difference between the avenue and the intersection avenue
         move(biggerA - smallerA);
         pickAllThings();
     }
