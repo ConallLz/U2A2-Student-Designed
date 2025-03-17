@@ -1,6 +1,6 @@
 /*
  * Progammer: Conall Lorentz and Charles Damian
- * Dates:
+ * Dates:  Mar. 3-17
 */
 import becker.robots.*;
 
@@ -33,7 +33,6 @@ public abstract class RacerBot extends RobotSE {
             biggerS = intersection.getStreet();
             smallerS = street;
         }
-
 
         if(avenue < intersection.getAvenue()){
             aveDirection = Direction.EAST;
