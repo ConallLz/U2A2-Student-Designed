@@ -17,6 +17,11 @@ public abstract class RacerBot extends RobotSE {
         super(city, y, x, direction, items);
     }
 
+    /**
+     * The move to intersection method finds the actual intersection to be moved to and then using the current intersection finds a nice route to get to the intersection
+     * @param intersection Intersection to move to
+     */
+
     public void moveToIntersection(Intersection intersection) {
         int avenue = super.getAvenue();
         int street = super.getStreet();
@@ -56,7 +61,9 @@ public abstract class RacerBot extends RobotSE {
         move(biggerA - smallerA);
         pickAllThings();
     }
-
+    /**
+     * @param i the number of times to move
+     */
     @Override
     public void move(int i) {
         int y = super.getAvenue();
