@@ -8,7 +8,11 @@ import becker.robots.*;
 public class RobotTaskD implements Runnable {
 	private City field = null;
 
+	/**
+	 * @param f - City where robot in the thread should be
+	 */
 	public RobotTaskD(City f) {
+		// Set city when the thread runs to what was given
         field = f;
     }
 
