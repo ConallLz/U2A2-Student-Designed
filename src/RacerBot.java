@@ -39,7 +39,6 @@ public abstract class RacerBot extends RobotSE {
             smallerS = street;
         }
 
-
         if(avenue < intersection.getAvenue()){
             aveDirection = Direction.EAST;
             biggerA = intersection.getAvenue();
